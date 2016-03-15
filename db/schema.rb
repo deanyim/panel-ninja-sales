@@ -24,16 +24,16 @@ ActiveRecord::Schema.define(version: 20160315011433) do
     t.datetime "ping_at"
     t.text     "notes"
     t.date     "first_contact"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.integer  "introduced_by_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "lead_id"
     t.integer  "lead_quality"
     t.integer  "lead_warmth"
     t.string   "pipeline_step"
     t.boolean  "is_closed"
   end
 
-  add_index "leads", ["introduced_by_id"], name: "index_leads_on_introduced_by_id", using: :btree
+  add_index "leads", ["lead_id"], name: "index_leads_on_lead_id", using: :btree
 
-  add_foreign_key "leads", "leads", column: "introduced_by_id"
+  add_foreign_key "leads", "leads"
 end
