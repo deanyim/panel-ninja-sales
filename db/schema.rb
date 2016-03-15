@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20160315011433) do
     t.integer  "lead_id"
     t.integer  "lead_quality"
     t.integer  "lead_warmth"
-    t.string   "pipeline_step"
+    t.integer  "pipeline_step"
     t.boolean  "is_closed"
   end
 
