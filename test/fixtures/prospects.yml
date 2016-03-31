@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  company: MyString
+  their_interest: 
+  our_interest: 
+  notes: MyText
+  is_closed: false
+
+two:
+  name: MyString
+  email: MyString
+  company: MyString
+  their_interest: 
+  our_interest: 
+  notes: MyText
+  is_closed: false
