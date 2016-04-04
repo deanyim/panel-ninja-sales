@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331195812) do
+ActiveRecord::Schema.define(version: 20160404195331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,9 +43,11 @@ ActiveRecord::Schema.define(version: 20160331195812) do
     t.integer  "our_interest"
     t.text     "notes"
     t.boolean  "is_closed"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.datetime "ping_at"
+    t.string   "ninja_subdomain"
+    t.text     "feature_requests"
   end
 
   add_foreign_key "leads", "leads"
